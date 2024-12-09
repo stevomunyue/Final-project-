@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Session Type</th>
+                <th>Amount</th>
+                <th>Payment Status</th>
+                <th>Uploaded Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+                <tr>
+                    <td>{{ appointment.full_name }}</td>
+                    <td>{{ appointment.email }}</td>
+                    <td>{{ appointment.phone_number }}</td>
+                    <td>{{ appointment.appointment_date }}</td>
+                    <td>{{ appointment.session_type }}</td>
+                    <td>{{ appointment.amount }}</td>
+                    <td>{{ "Paid" if appointment.payment_status else "Pending" }}</td>
+                    <td>
+                        {% if appointment.uploaded_image %}
+                            <img src="{{ appointment.uploaded_image.url }}" alt="Uploaded Image" width="100">
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

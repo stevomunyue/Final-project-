@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="static/assets/css/mood.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mood Tracker</h1>
+            <p>Track your daily mood patterns and gain insights into your emotional well-being.</p>
+            <img src="static/assets/img/logo.jpg" width="200pxx",height="200px" alt="logo">
+            <script src="static/assets/js/chart.js"></script>
+        </header>
+       
+        <!-- Mood Input Section -->
+        <div class="mood-input">
+            <label for="mood">Select your mood:</label>
+            <select id="mood">
+                <option value="Happy">Happy 😊</option>
+                <option value="Sad">Sad 😔</option>
+                <option value="Angry">Angry 😡</option>
+                <option value="Relaxed">Relaxed 😌</option>
+                <option value="Anxious">Anxious 😰</option>
+                <option value="Excited">Excited 🤩</option>
+            </select>
+            <button id="addMood">Add Mood</button>
+        </div>
+        
+        <!-- Mood Log -->
+        <h2>Mood Log</h2>
+        <ul id="moodLog"></ul>
+        
+        <!-- Visualization -->
+        <div class="chart-container">
+            <canvas id="moodChart"></canvas>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>
+                    Mental Health Support Hub is dedicated to providing accessible resources and 
+                    tools to help you prioritize mental well-being. Together, we can build a healthier 
+                    and more resilient community.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
+                    <li><a href="{% url 'resources' %}">Virtual Counseling</a></li>
+                    <li><a href="{% url 'community' %}">Community</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="{%static 'assets/img/facebook_icon-removebg-preview.png'%}" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Twitter">
+            
+                    <img src="{% static 'assets/img/x-removebg-preview.png'%}" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="{% static 'assets/img/instagram-removebg-preview.png'%}" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="{% static 'assets/img/linked in.png'%}" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health Support Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</html>

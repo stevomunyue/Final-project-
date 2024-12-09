@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="icon" href="{%static 'assets/img/logo.jpg'%}" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+        
+            <li class="dropdown">
+                <a href="resources.html" class="dropdown-toggle">Resources</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'articles' %}">Articles</a></li>
+                    <li><a href="{% url 'videos' %}">Videos</a></li>
+                    <li><a href="{% url 'podcasts' %}">Podcasts</a></li>
+                    <li><a href="{% url 'tools' %}">Tools</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Virtual Counseling</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'therapists' %}">Therapist Directory</a></li>
+                    <li><a href="{% url 'booking' %}">Booking Appointments</a></li>
+                    <li><a href="{% url 'faq' %}">FAQs About Counseling Services</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'community' %}">Community</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'register' %}" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007BFF; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Login/Register</a></li>
+        </ul>
+    </nav>    
+
+    <header>
+        <h1>Interactive Tools</h1>
+        <p>Empower yourself with interactive tools designed to support your mental health journey. From quizzes to worksheets, take the first step toward self-reflection and growth.</p>
+        <img src="static/assets/img/logo.jpg" width="200pxx",height="200px" alt="logo">
+    </header>
+
+    <main>
+        <section id="tools" class="tools-section">
+            <body style="background: url('{% static 'assets/img/background.png' %}') no-repeat center center fixed; background-size: cover; margin: 0;">
+            
+        
+            <div class="tools-grid">
+                <!-- Tool 1: Anxiety Quiz -->
+                <div class="tool-card">
+                    <h3>Anxiety Quiz</h3>
+                    <p>Take this self-assessment quiz to evaluate your anxiety levels and get tailored tips.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJGc5xytp85DJJkJXWv6Q5eB_9EdlCdfhH4rDLApmgIdjxqQ/viewform?usp=sf_link" class="btn">Start Quiz</a>
+                </div>
+        
+                <!-- Tool 2: Stress Management Planner -->
+                <div class="tool-card">
+                    <h3>Stress Management Planner</h3>
+                    <p>Download this worksheet to create a personalized plan for managing stress effectively.</p>
+                    <a href="https://myaidrive.com/pdf-viewer?url=file-id://report_19886433-0fc5-4945-a721-45bc7f9e4e86.pdf" class="btn">Download Worksheet</a>
+                </div>
+        
+                <!-- Tool 3: Mood Tracker -->
+                <div class="tool-card">
+                    <h3>Mood Tracker</h3>
+                    <p>Track your daily mood patterns and gain insights into your emotional well-being.</p>
+                    <a href="moodtracker.html" class="btn">Track Now</a>
+                </div>
+        
+                <!-- Tool 4: Gratitude Journal -->
+                <div class="tool-card">
+                    <h3>Gratitude Journal</h3>
+                    <p>Reflect on positive moments each day to boost happiness and mental clarity.</p>
+                    <a href="#" class="btn">Start Journaling</a>
+                </div>
+        
+                <!-- Tool 5: Goal Setting Worksheet -->
+                <div class="tool-card">
+                    <h3>Goal Setting Worksheet</h3>
+                    <p>Use this interactive worksheet to set achievable goals and track your progress.</p>
+                    <a href="#" class="btn">Download Worksheet</a>
+                </div>
+            </div>
+        </section>        
+    </main>    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>
+                    Mental Health Support Hub is dedicated to providing accessible resources and 
+                    tools to help you prioritize mental well-being. Together, we can build a healthier 
+                    and more resilient community.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="counseling.html">Virtual Counseling</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="{%static 'assets/img/facebook_icon-removebg-preview.png'%}" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <img src="{%static 'assets/img/x-removebg-preview.png'%}" alt="Twitter">
+                        {% comment %} <img src="static/assets/img/x-removebg-preview.png" alt="Twitter"> {% endcomment %}
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="{%static 'assets/img/instagram-removebg-preview.png'%}" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="{%static 'assets/img/linked in.png'%}" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health Support Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="static/assets/js/script.js"></script>
+</body>
+</html>

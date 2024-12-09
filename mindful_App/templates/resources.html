@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="icon" href="{%static 'assets/img/logo.jpg'%}" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+        
+            <li class="dropdown">
+                <a href="resources.html" class="dropdown-toggle">Resources</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'articles' %}">Articles</a></li>
+                    <li><a href="{% url 'videos' %}">Videos</a></li>
+                    <li><a href="{% url 'podcasts' %}">Podcasts</a></li>
+                    <li><a href="{% url 'tools' %}">Tools</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Virtual Counseling</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'therapists' %}">Therapist Directory</a></li>
+                    <li><a href="{% url 'booking' %}">Booking Appointments</a></li>
+                    <li><a href="{% url 'faq' %}">FAQs About Counseling Services</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'community' %}">Community</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'register' %}" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007BFF; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Login/Register</a></li>
+        </ul>
+    </nav>    
+
+    <header>
+        <h1>Resources</h1>
+        <p>Explore our curated collection of articles, videos, podcasts, and tools to support your mental health journey.</p>
+        <img src="img/logo.jpg" width="200pxx",height="200px" alt="logo">
+    </header>
+    <main>
+        <section id="resources" class="resources-tab">
+            <body style="background: url('{% static 'assets/img/background.png' %}') no-repeat center center fixed; background-size: cover; margin: 0;">
+            <!-- <h2></h2>
+            <p></p>
+             -->
+            <!-- Articles Section -->
+            <div class="resources-section">
+                <h3>Articles</h3>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>Anxiety</h4>
+                        <p>Learn effective strategies to understand and manage anxiety in daily life.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Depression</h4>
+                        <p>Explore tips and techniques to combat depression and regain hope.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Stress</h4>
+                        <p>Discover tools to reduce stress and improve your overall well-being.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Videos Section -->
+            <div class="resources-section">
+                <h3>Videos</h3>
+                <div class="videos-grid">
+                    <div class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bLpChrgS0AY?si=_vGxvMRlmNQiFvJC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" allowfullscreen></iframe>
+                        <p>Understanding Mindfulness for Stress Reduction</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tEmt1Znux58?si=ai0x_ObuCuRsTpOq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>Effective Breathing Techniques for Anxiety</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZsTKyYOuK84?si=8RExYKra6dxe4DYB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>How to Practice Self-Compassion</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Podcasts Section -->
+            <div class="resources-section">
+                <h3>Podcasts</h3>
+                <div class="podcasts-list">
+                    <div class="podcast-item">
+                        <h4><a href="#">Episode 1: Breaking Down Anxiety</a></h4>
+                        <p>Insights from experts on managing anxiety effectively.</p>
+                    </div>
+                    <div class="podcast-item">
+                        <h4><a href="#">Episode 2: Building Emotional Resilience</a></h4>
+                        <p>Learn how to bounce back from life’s challenges.</p>
+                    </div>
+                    <div class="podcast-item">
+                        <h4><a href="#">Episode 3: The Power of Positive Thinking</a></h4>
+                        <p>Explore the benefits of maintaining a positive mindset.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tools Section -->
+            <div class="resources-section">
+                <h3>Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h4>Anxiety Quiz</h4>
+                        <p>Take a quick assessment to evaluate your anxiety levels.</p>
+                        <a href="#" class="btn">Start Quiz</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Stress Management Planner</h4>
+                        <p>Download worksheets to plan and manage stress effectively.</p>
+                        <a href="#" class="btn">Download</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Mood Tracker</h4>
+                        <p>Track your mood patterns to understand your mental health better.</p>
+                        <a href="#" class="btn">Track Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>
+                    Mental Health Support Hub is dedicated to providing accessible resources and 
+                    tools to help you prioritize mental well-being. Together, we can build a healthier 
+                    and more resilient community.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="counseling.html">Virtual Counseling</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="{%static 'assets/img/facebook_icon-removebg-preview.png'%}" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <img src="static/assets/img/x-removebg-preview.png" alt="Twitter">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="static/assets/img/instagram-removebg-preview.png" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="static/assets/img/linked in.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health Support Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="static/assets/js/script.js"></script>
+</body>
+</html>

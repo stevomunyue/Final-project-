@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="icon" href="{%static 'assets/img/logo.jpg'%}" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+        
+            <li class="dropdown">
+                <a href="resources.html" class="dropdown-toggle">Resources</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'articles' %}">Articles</a></li>
+                    <li><a href="{% url 'videos' %}">Videos</a></li>
+                    <li><a href="{% url 'podcasts' %}">Podcasts</a></li>
+                    <li><a href="{% url 'tools' %}">Tools</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Virtual Counseling</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'therapists' %}">Therapist Directory</a></li>
+                    <li><a href="{% url 'booking' %}">Booking Appointments</a></li>
+                    <li><a href="{% url 'faq' %}">FAQs About Counseling Services</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'community' %}">Community</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'register' %}" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007BFF; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Login/Register</a></li>
+        </ul>
+    </nav>    
+
+    <header>
+        <h1>About Us</h1>
+        <p>We are committed to supporting mental well-being through accessible resources, compassionate care, and a strong community.</p>
+        <img src="static/assets/img/logo.jpg" width="200pxx",height="200px" alt="logo">
+    </header>
+
+    <main>
+        <section id="about-us" class="about-us-section">
+            <body style="background: url('{% static 'assets/img/background.png' %}') no-repeat center center fixed; background-size: cover; margin: 0;">
+            <br><br>
+        
+            <!-- Mission Statement -->
+            <div class="about-category">
+                <h3>Mission Statement</h3>
+                <p>
+                    At Mental Health Support Hub, our mission is to provide individuals with the tools and resources they need to 
+                    prioritize their mental health. We envision a world where mental well-being is accessible to everyone, 
+                    empowering individuals to live healthier and more fulfilling lives.
+                </p>
+            </div>
+        
+            <!-- Team Section -->
+            <div class="about-category">
+                <h3>Meet Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="{%static 'assets/img/steve.png'%}" alt="Founder">
+                        <h4>Stephen Munyue</h4>
+                        <p>Founder & CEO</p>
+                        <p>Stephen is a mental health advocate with 15 years of experience in counseling and therapy.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="{%static 'assets/img/david Njoroge.jpeg'%}" alt="Therapist">
+                        <h4>Dr. David Njoroge</h4>
+                        <p>Clinical Therapist</p>
+                        <p>Dr. David specializes in Cognitive Behavioral Therapy and has helped hundreds of clients achieve better mental health.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://via.placeholder.com/150" alt="Volunteer Coordinator">
+                        <h4>Emily Taylor</h4>
+                        <p>Volunteer Coordinator</p>
+                        <p>Emily oversees our community outreach programs, connecting volunteers with opportunities to make a difference.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Partnerships Section -->
+            <div class="about-category">
+                <h3>Our Partnerships</h3>
+                <p>
+                    We collaborate with leading mental health organizations to enhance the resources and support we provide. 
+                    These partnerships enable us to offer expert insights, comprehensive tools, and community-based initiatives 
+                    that address a wide range of mental health needs.
+                </p>
+                <div class="partnerships-grid">
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50" alt="Organization 1">
+                        <p>Mental Wellness Foundation</p>
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50" alt="Organization 2">
+                        <p>Global Health Alliance</p>
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50" alt="Organization 3">
+                        <p>Resilience Network</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>
+                    Mental Health Support Hub is dedicated to providing accessible resources and 
+                    tools to help you prioritize mental well-being. Together, we can build a healthier 
+                    and more resilient community.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
+                    <li><a href="{% url 'resources' %}">Virtual Counseling</a></li>
+                    <li><a href="{% url 'community' %}">Community</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="{%static 'assets/img/facebook_icon-removebg-preview.png'%}" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Twitter">
+            
+                    <img src="{% static 'assets/img/x-removebg-preview.png'%}" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="{% static 'assets/img/instagram-removebg-preview.png'%}" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="{% static 'assets/img/linked in.png'%}" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health Support Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>

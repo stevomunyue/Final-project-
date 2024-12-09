@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="icon" href="{%static 'assets/img/logo.jpg'%}" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+        
+            <li class="dropdown">
+                <a href="resources.html" class="dropdown-toggle">Resources</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'articles' %}">Articles</a></li>
+                    <li><a href="{% url 'videos' %}">Videos</a></li>
+                    <li><a href="{% url 'podcasts' %}">Podcasts</a></li>
+                    <li><a href="{% url 'tools' %}">Tools</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Virtual Counseling</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'therapists' %}">Therapist Directory</a></li>
+                    <li><a href="{% url 'booking' %}">Booking Appointments</a></li>
+                    <li><a href="{% url 'faq' %}">FAQs About Counseling Services</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'community' %}">Community</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'register' %}" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007BFF; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Login/Register</a></li>
+        </ul>
+    </nav>    
+    <header>
+        <h1>Articles</h1>
+        <p>Explore our curated articles to help you understand and manage various mental health challenges.</p>
+        <img src="static/assets/img/logo.jpg" width="200pxx",height="200px" alt="logo">
+    </header>
+
+    <main>
+        <section id="articles" class="articles-section">
+            <body style="background: url('{% static 'assets/img/background.png' %}') no-repeat center center fixed; background-size: cover; margin: 0;">
+            <!-- Category: Anxiety Management -->
+            <div class="article-category">
+                <h3>Anxiety Management</h3>
+                <div class="article-grid">
+                    <div class="article-card">
+                        <h4>Overcoming Social Anxiety</h4>
+                        <p>Tips for managing anxiety during social events and building confidence.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Mindfulness for Anxiety</h4>
+                        <p>Learn how mindfulness techniques can help ease daily worries.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Understanding Anxiety Triggers</h4>
+                        <p>A guide to recognizing and managing the triggers that cause anxiety.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Category: Understanding Depression -->
+            <div class="article-category">
+                <h3>Understanding Depression</h3>
+                <div class="article-grid">
+                    <div class="article-card">
+                        <h4>Breaking the Stigma</h4>
+                        <p>How to talk openly about depression and seek the help you need.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Self-Care for Depression</h4>
+                        <p>Simple and effective self-care practices to combat depressive episodes.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Depression in Teens</h4>
+                        <p>Understanding the unique challenges of adolescent depression.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Category: Stress Management -->
+            <div class="article-category">
+                <h3>Stress Management</h3>
+                <div class="article-grid">
+                    <div class="article-card">
+                        <h4>Quick Stress-Busting Techniques</h4>
+                        <p>Effective tips for reducing stress in your daily life.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Workplace Stress</h4>
+                        <p>Learn how to create a stress-free workspace at home or in the office.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="article-card">
+                        <h4>Understanding Chronic Stress</h4>
+                        <p>The long-term effects of stress and how to manage them effectively.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>
+                    Mental Health Support Hub is dedicated to providing accessible resources and 
+                    tools to help you prioritize mental well-being. Together, we can build a healthier 
+                    and more resilient community.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
+                    <li><a href="{% url 'resources' %}">Virtual Counseling</a></li>
+                    <li><a href="{% url 'community' %}">Community</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="{%static 'assets/img/facebook_icon-removebg-preview.png'%}" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Twitter">
+            
+                    <img src="{% static 'assets/img/x-removebg-preview.png'%}" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="{% static 'assets/img/instagram-removebg-preview.png'%}" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="{% static 'assets/img/linked in.png'%}" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health Support Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
